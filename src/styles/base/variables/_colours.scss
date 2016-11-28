@@ -1,1 +1,5 @@
-$theme-primary-color: unquote("rgba(#{$palette-pink-500}, 1.00)") !default;
+$theme-primary-color: unquote("rgba(#{$palette-purple-900}, 1.00)") !default;
+
+$color-text-dark: rgba(0,0,0,1);
+$color-text-normal: rgba(0,0,0, .87);
+$color-text-light: rgba(0,0,0,.54);

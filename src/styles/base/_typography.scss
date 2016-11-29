@@ -1,6 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif !important;
   color: $color-text-normal;
+  background-color: unquote("rgb(#{$palette-grey-50})");
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -67,9 +68,9 @@ body {
 }
 
 %typo-body-1 {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 18px;
   letter-spacing: 0;
 }
 

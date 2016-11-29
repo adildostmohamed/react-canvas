@@ -1,0 +1,44 @@
+%m-nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: white;
+  color: $banner-text-color;
+  align-items: center;
+
+  @include shadow-2dp();
+}
+
+.m-nav {
+  @extend %m-nav;
+  height: $header-height--skinny;
+}
+
+.m-nav--tall {
+  @extend %m-nav;
+  height: $header-height--tall;
+}
+
+.m-nav__list {
+  display: flex;
+  margin: 0;
+}
+
+.m-nav__list-item {
+  display: flex;
+  align-items: center;
+  margin: 0 24px 0 0;
+}
+
+.m-nav__list-link {
+  @extend %typo-button;
+  padding: 8px;
+  border-radius: 2px;
+  transition: all 0.3s;
+  color: $color-text-links;
+  &:hover, &:focus {
+    background-color: rgba(0,0,0, 0.07);
+    text-decoration: none;
+    color: $color-text-links;
+  }
+}

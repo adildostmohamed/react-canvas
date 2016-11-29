@@ -1,0 +1,17 @@
+%m-banner {
+  display: flex;
+  width: 100%;
+  background-color: $banner-background-color;
+  color: $banner-text-color;
+  align-items: center;
+}
+
+.m-banner {
+  @extend %m-banner;
+  height: $header-height;
+}
+
+.m-banner--tall {
+  @extend %m-banner;
+  height: $header-height--tall;
+}

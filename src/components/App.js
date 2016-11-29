@@ -2,20 +2,19 @@ import React, { Component } from 'react';
 
 import {} from 'styles/main.scss';
 
-import Header from 'components/Header';
-import CardContentContainer from 'components/CardContentContainer';
+import Header from 'components/layout/Header';
+
 
 class App extends Component {
   render() {
     return (
       <div>
         <Header />
-        <main className="container">
-          <h1>Hello world, lets play</h1>
-          <CardContentContainer />
+        <main className="main container">
+          { this.props.children }
         </main>
       </div>
-    );
+    )
   }
 }
 

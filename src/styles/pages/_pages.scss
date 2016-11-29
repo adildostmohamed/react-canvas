@@ -1,0 +1,5 @@
+.main {
+  position: relative;
+  top: calc(#{$header-height} + #{$header-height--skinny});
+  padding-top: 48px;
+}

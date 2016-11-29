@@ -13,7 +13,7 @@ class CardContent extends Component {
   renderCardTitle() {
     if(this.props.content && this.props.content.hasOwnProperty("title")) {
       return (
-        <h3 className="card__title">{this.props.content.title}</h3>
+        <h3 className="m-card__title">{this.props.content.title}</h3>
       )
     }
     return null;
@@ -22,7 +22,7 @@ class CardContent extends Component {
   renderCardSubtitle() {
     if(this.props.content && this.props.content.hasOwnProperty("subtitle")) {
       return (
-        <p className="card__subtitle">{this.props.content.subtitle}</p>
+        <p className="m-card__subtitle">{this.props.content.subtitle}</p>
       )
     }
     return null;
@@ -31,7 +31,7 @@ class CardContent extends Component {
   renderCardText() {
     if(this.props.content && this.props.content.hasOwnProperty("text")) {
       return (
-        <p className="card__text">{this.props.content.text}</p>
+        <p className="m-card__text">{this.props.content.text}</p>
       )
     }
     return null;
@@ -43,7 +43,7 @@ class CardContent extends Component {
       return actionKeys.map((actionKey, index) => {
         const action = this.props.content.actions[actionKey];
         return (
-          <a className="card__action" key={index} href={action.target}>
+          <a className="m-card__action" key={index} href={action.target}>
             {action.label}
           </a>
         )
@@ -54,19 +54,19 @@ class CardContent extends Component {
 
   render() {
     return (
-      <div className="col-sm-6 col-md-4 card__wrapper">
+      <div className="col-sm-6 col-md-4 m-card__wrapper">
         { this.props.cardIsLoading ? (
           <p>Loading please</p>
         ) : (
-          <div className="card">
-            <div className="card__title-wrapper">
+          <div className="m-card">
+            <div className="m-card__title-wrapper">
               {this.renderCardTitle()}
               {this.renderCardSubtitle()}
             </div>
-            <div className="card__text-wrapper">
+            <div className="m-card__text-wrapper">
               {this.renderCardText()}
             </div>
-            <div className="card__actions-wrapper">
+            <div className="m-card__actions-wrapper">
               {this.renderCardActions()}
             </div>
           </div>

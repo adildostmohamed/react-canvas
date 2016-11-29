@@ -1,4 +1,4 @@
-.card-row {
+.m-card-row {
   display: flex;
   flex-wrap: wrap;
 }
@@ -11,44 +11,46 @@
   margin-bottom: 24px;
 }
 
-.card__wrapper {
+.m-card__wrapper {
   display: flex;
 }
 
-.card {
+.m-card {
   display: flex;
   flex-wrap: wrap;
   @extend %card;
 }
 
-.card__title {
+.m-card__title {
   @extend %typo-headline;
   margin-top: 0;
   margin-bottom: 8px;
   color: $color-text-dark;
 }
 
-.card__subtitle {
+.m-card__subtitle {
   @extend %typo-body-2;
   color: $color-text-light;
 }
 
-.card__text {
+.m-card__text {
   @extend %typo-body-2;
   color: $color-text-normal;
 }
 
-.card__actions-wrapper {
+.m-card__actions-wrapper {
   align-self: flex-end;
 }
 
-.card__action {
+.m-card__action {
   @extend %typo-button;
   padding: 8px;
   border-radius: 2px;
   transition: all 0.3s;
+  color: $color-text-links;
   &:hover, &:focus {
     background-color: rgba(0,0,0, 0.07);
     text-decoration: none;
+    color: $color-text-links;
   }
 }

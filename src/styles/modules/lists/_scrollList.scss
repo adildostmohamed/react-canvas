@@ -1,7 +1,10 @@
 .m-scroll-list {
   padding: 0;
   max-height: 500px;
+  background-color: white;
+  @include shadow-2dp();
   overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .m-scroll-list__title-wrapper {
@@ -11,7 +14,7 @@
 }
 
 .m-scroll-list__title {
-  @extend %typo-headline;
+  @extend %typo-title;
   color: white;
   margin: 0;
 }

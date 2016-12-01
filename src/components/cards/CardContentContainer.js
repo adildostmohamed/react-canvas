@@ -23,7 +23,7 @@ class CardContentContainer extends Component {
   }
   render() {
     return (
-      <div className="row m-card-row">
+      <div className="m-card-row">
         { this.state.contentCards.map((card, index) => {
           return (
             <CardContent key={index} content={this.state.contentCards[index]} />

@@ -4,7 +4,9 @@ import CardContentContainer from 'components/cards/CardContentContainer';
 
 const PageWrapper2 = (props) => {
   return (
-    <CardContentContainer cardsToSync={'contentCards'} />
+    <div className="container">
+      <CardContentContainer cardsToSync={'contentCards'} />
+    </div>
   )
 };
 

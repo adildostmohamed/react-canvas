@@ -2,6 +2,24 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const Header = (props) => {
+  const links = [
+    {
+      name: 'Home',
+      link: '/'
+    },
+    {
+      name: 'Team space',
+      link: '/two'
+    },
+    {
+      name: 'Tools',
+      link: '/three'
+    },
+    {
+      name: 'Learning centre',
+      link: '/four'
+    }
+  ];
   return (
     <header className="m-header">
       <div role="banner" className="m-banner">
@@ -11,18 +29,13 @@ const Header = (props) => {
       </div>
       <nav role="navigation" className="m-nav">
         <ul className="m-nav__list">
-          <li className="m-nav__list-item">
-            <Link className="m-nav__list-link" to="/">Page 1</Link>
-          </li>
-          <li className="m-nav__list-item">
-            <Link className="m-nav__list-link" to="/two">Page 2</Link>
-          </li>
-          <li className="m-nav__list-item">
-            <Link className="m-nav__list-link" to="/three">Page 3</Link>
-          </li>
-          <li className="m-nav__list-item">
-            <Link className="m-nav__list-link" to="/four">Page 4</Link>
-          </li>
+          { links.map((link, index) => {
+            return (
+              <li className="m-nav__list-item">
+                <Link className="m-nav__list-link" activeClassName="m-nav__list-link--active" to={link.link}>{ link.name }</Link>
+              </li>
+            )
+          })}
         </ul>
       </nav>
     </header>

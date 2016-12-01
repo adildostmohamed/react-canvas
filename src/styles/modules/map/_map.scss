@@ -1,0 +1,15 @@
+#map-container {
+  height: 566px;
+  width: 100%;
+}
+
+.m-map__marker {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: $color-theme-accent;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $color-theme-primary;
+  }
+}

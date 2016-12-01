@@ -1,64 +1,27 @@
 import React, { Component } from 'react';
+import base from 'config/base';
 
 import ScrollableList from 'components/lists/ScrollableList';
 
 export default class ScrollableListContainer extends Component {
-  render() {
-    const listData = {
-      title: 'Title of this list',
-      items: [
-        {
-          name: 'Item 1',
-          desc: 'This is the description for the first list item',
-          link: 'https://www.google.com'
-        },
-        {
-          name: 'Item 2',
-          desc: 'This is the description for the second list item',
-          link: 'https://www.google.com'
-        },
-        {
-          name: 'Item 3',
-          desc: 'This is the description for the fourth list item',
-          link: 'https://www.google.com'
-        },
-        {
-          name: 'Item 4',
-        },
-        {
-          name: 'Item 5',
-          desc: 'This is the description for the list item',
-        },
-        {
-          name: 'Item 6',
-          link: 'https://www.google.com'
-        },
-        {
-          name: 'Item 1',
-          desc: 'This is the description for the first list item',
-          link: 'https://www.google.com'
-        },
-        {
-          name: 'Item 2',
-          desc: 'This is the description for the second list item',
-          link: 'https://www.google.com'
-        },
-        {
-          name: 'Item 3',
-          desc: 'This is the description for the fourth list item',
-          link: 'https://www.google.com'
-        },
-        {
-          name: 'Item 4',
-        },
-        {
-          name: 'Item 5',
-          desc: 'This is the description for the list item',
-        }
-      ]
+  constructor(props) {
+    super(props);
+    this.state = {
+      list: {}
     }
+  }
+  componentDidMount(){
+    this.firebaseRef = base.syncState(this.props.listToSync,{
+      context: this,
+      state: 'list'
+    });
+  }
+  componentWillUnmount() {
+    base.removeBinding(this.firebaseRef);
+  }
+  render() {
     return (
-      <ScrollableList listData={listData} />
+      <ScrollableList listData={this.state.list} />
     )
   }
 }

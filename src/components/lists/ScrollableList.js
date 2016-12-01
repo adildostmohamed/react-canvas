@@ -21,7 +21,9 @@ export default class ScrollableList extends Component {
   }
   renderListItems() {
     if(this.props.listData && this.props.listData.hasOwnProperty("items")) {
-      return this.props.listData.items.map( (item, index) => {
+      const itemKeys = Object.keys(this.props.listData.items);
+      return itemKeys.map( (itemKey, index) => {
+        const item = this.props.listData.items[itemKey];
         return (
           <ListItem key={index} item={item} />
         )

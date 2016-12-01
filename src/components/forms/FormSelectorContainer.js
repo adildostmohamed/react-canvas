@@ -13,10 +13,7 @@ export default class FormSelectorContainer extends Component {
   componentDidMount(){
     this.firebaseRef = base.syncState(this.props.formsToSync,{
       context: this,
-      state: 'forms',
-      then() {
-        console.log(JSON.stringify(this.state.forms, null, 2));
-      }
+      state: 'forms'
     });
   }
   componentWillUnmount() {

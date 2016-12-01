@@ -43,6 +43,7 @@ export default class ListItem extends Component {
               { this.renderListItemName() }
               { this.renderListItemDesc() }
             </a>
+            <hr  className="m-list-item__divider" />
           </span>
       )
     } else {
@@ -50,6 +51,7 @@ export default class ListItem extends Component {
         <span className="m-list-item__content-wrapper">
           { this.renderListItemName() }
           { this.renderListItemDesc() }
+          <hr  className="m-list-item__divider" />
         </span>
       )
     }
